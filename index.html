@@ -40,55 +40,6 @@
 <link rel="shortcut icon" href="index.hyperesources/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="index.hyperesources/apple-touch-icon.png" />
 <link rel="manifest" href="index.hyperesources/site.webmanifest" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/worldoptimizer/HypeScrollMagic/HypeScrollMagic.min.js?v107"></script>	
-<script>
-  function layoutRequest(hypeDocument, element, event) {
-    //returns [{name: xxx; height:xxx; width:xxx; breakpoint: xxx}, ...]
-    var _layouts = hypeDocument.layoutsForSceneNamed(hypeDocument.currentSceneName());
-    //current Layoutname
-    var layoutName = hypeDocument.currentLayoutName();
-
-    //get data for current Layout -> {name: xxx; height:xxx; width:xxx; breakpoint: xxx}
-    var res = null;
-
-    for (var i = 0; i < _layouts.length; i++) {
-      var Obj = _layouts[i];
-      if (Obj.name === layoutName) {
-        res = Obj;
-        break;
-      }
-    }
-
-
-    // set hypeDocumentElement height depending on layoutratio ... 
-    if (res) {
-      var ratioScale = res['width'] / res['height'];
-      var hypeEl = document.getElementById(hypeDocument.documentId());
-      var currentWidth = hypeEl.offsetWidth;
-      var newHeight = currentWidth / ratioScale;
-      hypeEl.style.height = newHeight + 'px';
-
-
-      hypeDocument.relayoutIfNecessary();
-    }
-
-
-
-
-    return false
-
-  }
-
-if ("HYPE_eventListeners" in window === false) {
-  window.HYPE_eventListeners = Array();
-}
-window.HYPE_eventListeners.push({
-  "type": "HypeLayoutRequest",
-  "callback": layoutRequest
-}); 
-</script>	
-	
 
 	<!-- end copy -->
   </head>
@@ -96,7 +47,7 @@ window.HYPE_eventListeners.push({
 	<!-- copy these lines to your document: -->
 
 	<div id="index_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:100%;height:3810px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?77345"></script>
+		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?96335"></script>
 	</div>
 
 	<!-- end copy -->
